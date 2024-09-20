@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/NEETRUNNER/WEATHER_IN_CITIES/static/css/main.9a656267.css",
+    "main.js": "/NEETRUNNER/WEATHER_IN_CITIES/static/js/main.1b2ef966.js",
+    "static/media/card_cloudy.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/card_cloudy.6cf1f7848c043f1a552e.png",
+    "static/media/storm.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/storm.34ba1304792a31b7d163.png",
+    "static/media/card_rain.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/card_rain.53fe1fda4312b5d375f0.png",
+    "static/media/card_sunny.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/card_sunny.1bfeaaec56c03cd6f902.png",
+    "static/media/card_clear.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/card_clear.39c00a0b8b214d7c09b9.png",
+    "static/media/clearSky.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/clearSky.0756fd770f55ea454fd7.png",
+    "static/media/cloudy.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/cloudy.f009e441a604361a2783.png",
+    "static/media/rain.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/rain.a19c7f6db64dc7f90a56.png",
+    "static/media/sunny.png": "/NEETRUNNER/WEATHER_IN_CITIES/static/media/sunny.a6d0b7d87d2022baaf47.png",
+    "index.html": "/NEETRUNNER/WEATHER_IN_CITIES/index.html",
+    "main.9a656267.css.map": "/NEETRUNNER/WEATHER_IN_CITIES/static/css/main.9a656267.css.map",
+    "main.1b2ef966.js.map": "/NEETRUNNER/WEATHER_IN_CITIES/static/js/main.1b2ef966.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a656267.css",
+    "static/js/main.1b2ef966.js"
+  ]
+}
