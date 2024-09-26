@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { useState, useEffect } from 'react';
 
 // Получили картинки
 import cloudyImg from '../../img/cloudy.png';
@@ -20,12 +20,11 @@ import { TiWaves } from 'react-icons/ti';
 // Спиннер
 import { Hourglass } from 'react-loader-spinner';
 
-class Main extends Component {
-    state = { // Создаём начальный стейт для елементов
-        loading: false,
-    };
+const Main = ({ weatherClouds, cityName, cityTemp, humidity, lvlSea, wind, pressure, visibility }) => {
 
-    getWeatherImage(weatherClouds) { // Метод который будет подставлять картинку в зависимости от того что мы получим в weatherClouds(облачность)
+    const [loading, setLoading] = useState(false);
+
+    const getWeatherImage = (weatherClouds) => { // Метод который будет подставлять картинку в зависимости от того что мы получим в weatherClouds(облачность)
         switch (weatherClouds) {
             case 'Clouds':
                 return cloudyImg;
@@ -42,40 +41,20 @@ class Main extends Component {
         }
     }
 
-    componentDidUpdate(prevProps) { // Хук проверяет есть ли какие-то изменения с прошлого стейта, прошлый стейт у нас null и мы сравниваем его, с текущем стейтом, например вбили город Днепр, в стейт записалось это значения, и после мы вводим новое, и получаем сравнение города Днепр с например городом Киев, и так у нас меняется стейт спиннера, когда мы вбиваем другой город, он переводится в false, после получения нового города проходит интервал и он переводится в true
-        if (
-            prevProps.cityName !== this.props.cityName ||
-            prevProps.cityTemp !== this.props.cityTemp
-        ) {
-            console.log(prevProps.cityName)
-            console.log(this.props.cityName)
-            // Снова показываем спиннер при обновлении данных
-            this.setState({ loading: true });
+    useEffect(() => {
+        setLoading(true);
+        // Имитация загрузки данных (например, запрос API)
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2500);
 
-            // Имитация загрузки данных (например, запрос API)
-            setTimeout(() => {
-                this.setState({ loading: false });
-            }, 2500); // Можно заменить на реальный запрос данных
-        }
-    }
+        // Очистка таймера при размонтировании компонента или обновлении эффекта
+        return () => clearTimeout(timer);
+    }, [cityName, cityTemp]); // Эффект срабатывает при изменении cityName или cityTemp
 
-    render() {
-
-        const {
-            cityName,
-            cityTemp,
-            weatherClouds,
-            humidity,
-            lvlSea,
-            wind,
-            pressure,
-            visibility,
-        } = this.props;
-    
-        const { loading } = this.state;
         console.log(loading)
 
-        const content = !loading ? <RenderCard cityTemp={cityTemp} cityName={cityName} weatherClouds={weatherClouds} getWeatherImage={this.getWeatherImage} humidity={humidity} lvlSea={lvlSea} wind={wind} pressure={pressure} visibility={visibility}></RenderCard> : null;
+        const content = !loading ? <RenderCard cityTemp={cityTemp} cityName={cityName} weatherClouds={weatherClouds} getWeatherImage={getWeatherImage} humidity={humidity} lvlSea={lvlSea} wind={wind} pressure={pressure} visibility={visibility}></RenderCard> : null;
         const spinner = loading ? <LoadSpinner></LoadSpinner> : null;
 
         return (
@@ -84,7 +63,6 @@ class Main extends Component {
                 {spinner}
             </>
         );
-    }
 }
 
 const RenderCard = ({cityTemp, cityName, weatherClouds, getWeatherImage, humidity, lvlSea, wind, pressure, visibility}) => { // Метод который рендерит карточку и доп. информацию
