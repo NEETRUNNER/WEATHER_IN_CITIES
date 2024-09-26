@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WEATHER_IN_CITIES/static/css/main.9a656267.css",
-    "main.js": "/WEATHER_IN_CITIES/static/js/main.5877a93a.js",
+    "main.css": "/WEATHER_IN_CITIES/static/css/main.3a472bea.css",
+    "main.js": "/WEATHER_IN_CITIES/static/js/main.8ba36bc1.js",
     "static/media/storm.png": "/WEATHER_IN_CITIES/static/media/storm.34ba1304792a31b7d163.png",
     "static/media/card_rain.png": "/WEATHER_IN_CITIES/static/media/card_rain.53fe1fda4312b5d375f0.png",
     "static/media/card_sunny.png": "/WEATHER_IN_CITIES/static/media/card_sunny.1bfeaaec56c03cd6f902.png",
@@ -12,11 +12,11 @@
     "static/media/rain.png": "/WEATHER_IN_CITIES/static/media/rain.a19c7f6db64dc7f90a56.png",
     "static/media/sunny.png": "/WEATHER_IN_CITIES/static/media/sunny.a6d0b7d87d2022baaf47.png",
     "index.html": "/WEATHER_IN_CITIES/index.html",
-    "main.9a656267.css.map": "/WEATHER_IN_CITIES/static/css/main.9a656267.css.map",
-    "main.5877a93a.js.map": "/WEATHER_IN_CITIES/static/js/main.5877a93a.js.map"
+    "main.3a472bea.css.map": "/WEATHER_IN_CITIES/static/css/main.3a472bea.css.map",
+    "main.8ba36bc1.js.map": "/WEATHER_IN_CITIES/static/js/main.8ba36bc1.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a656267.css",
-    "static/js/main.5877a93a.js"
+    "static/css/main.3a472bea.css",
+    "static/js/main.8ba36bc1.js"
   ]
 }
